@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Dark mode via class strategy (for user toggle + system preference) */
+@variant dark (&:where(.dark, .dark *));
+
+/* Theme tokens */
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-surface-light: #fafaf9;
+  --color-surface-dark: #18181b;
+  --color-text-primary: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-accent: #3b82f6;
+  --color-accent-muted: #93c5fd;
+
+  --color-text-primary-dark: #fafaf9;
+  --color-text-secondary-dark: #a8a29e;
+  --color-accent-dark: #60a5fa;
+  --color-accent-muted-dark: #1e40af;
+}
+
+/* Base styles */
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-light);
+}
+
+html.dark {
+  color: var(--color-text-primary-dark);
+  background-color: var(--color-surface-dark);
+}
+
+body {
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

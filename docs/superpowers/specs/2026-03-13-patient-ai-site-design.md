@@ -20,7 +20,7 @@
 - **Three.js** — contingency only for FibreStrandHero if SVG performance is insufficient
 
 ### Fonts
-- **Playfair Display** (serif) — chapter titles, display text
+- **Playfair Display** (Google Font, serif) — chapter titles, display text. Replaces Editorial New from the original file-tree plan; chosen as a freely available alternative with a similar editorial feel.
 - **Inter** (variable) — UI, data labels, body text
 
 ### Styling
@@ -32,10 +32,14 @@
 - **Cloudflare Pages** — static `dist/` output
 - Includes `_headers` (CSP, HSTS), `_redirects`, sitemap, `robots.txt`
 
+### Content Security Policy Note
+D3 and GSAP both manipulate inline styles extensively. CSP must accommodate this via `style-src 'unsafe-inline'` or a nonce strategy. Vue is used in runtime-only mode (no template compilation) to avoid needing `unsafe-eval`.
+
 ### Content Structure
 - 8 MDX chapters in `src/content/` with typed frontmatter schema
-- 30 JSON data files in `public/data/`
+- 30 JSON application data files + 1 TopoJSON boundary file (`geo-boundaries.json`, ~200KB, sourced from Natural Earth) in `public/data/`
 - 19 AI-generated images in `public/images/`
+- The `docs/` directory is outside `src/` and is not processed by Astro. No explicit exclusion is needed.
 
 ---
 
@@ -49,20 +53,35 @@
 | Vanilla JS | `src/components/vanilla/` | GSAP + D3 components via Astro `<script>` tags | 20 |
 | Vue islands | `src/components/vue/` | Complex stateful: quizzes, calculators, explorable models | 14 |
 
-### Shared UI Components (Astro, static)
-- ChapterHeader, ChapterNav, ChapterTransition, DeepDive, Callout, StatHighlight, Figure, CrossRef, FictionBadge, ThemeToggle, ScrollProgress
+### Shared UI Components (11 Astro components, static)
 
-### Interactive Components: 34 Total
+| Component | Purpose |
+|-----------|---------|
+| ChapterHeader | Title block with act label, chapter number, reading time |
+| ChapterNav | Persistent navigation bar with progress indicator |
+| ChapterTransition | Scroll-driven fade/crossfade between chapter sections (GSAP in Phase 4) |
+| DeepDive | Collapsible `<details>`/`<summary>` wrapper for specialist content, with smooth height animation |
+| Callout | Pull-quote / highlighted insight block. Types: `stat`, `quote`, `insight` |
+| StatHighlight | Single large-number display with label and optional unit. Distinguished from Callout by numeric formatting and scale emphasis |
+| Figure | Image wrapper using Astro `astro:assets` for optimization. Handles caption, attribution, responsive `srcset`, lazy loading, `width`/`height` for CLS prevention |
+| CrossRef | Inline link to a concept in another chapter. Renders as a styled anchor with chapter indicator icon. Resolves chapter slugs from content collection |
+| FictionBadge | Small inline indicator (subtle icon + tooltip) marking a fictional entity name. Appears on first use per chapter |
+| ThemeToggle | Dark/light mode toggle button with sun/moon icon |
+| ScrollProgress | Thin progress bar fixed to viewport top, reflecting scroll depth |
 
-| Tier | Count | Estimated Effort |
-|------|-------|-----------------|
-| Tier 1 (ship at launch) | 10 | ~79h |
-| Tier 2 (high value) | 9 | ~76h |
-| Tier 3 (nice to have) | 15 | ~73h |
-| Shared UI | 6 | ~12h |
-| **Total** | **40** | **~240h** |
+### Component Totals
 
-Full component specifications are in `docs/site-plan/components.md`.
+| Category | Count | Estimated Effort |
+|----------|-------|-----------------|
+| Tier 1 interactive (ship at launch) | 10 | ~79h |
+| Tier 2 interactive (high value) | 9 | ~76h |
+| Tier 3 interactive (nice to have) | 15 | ~73h |
+| Shared UI (static Astro) | 11 | ~16h |
+| **Total** | **45** | **~244h** |
+
+Note: "34 interactive components" refers to the numbered components (#1–#34) in `docs/site-plan/components.md`. The 11 shared UI components are in addition to these.
+
+Full interactive component specifications are in `docs/site-plan/components.md`.
 
 ---
 
@@ -106,6 +125,8 @@ Full component specifications are in `docs/site-plan/components.md`.
 
 **Goal:** Build all 34 interactive components, chapter by chapter from 0 to 7.
 
+**Note on build approach:** The original build-order document (`docs/site-plan/build-order.md`) introduced libraries incrementally (GSAP → D3 → Vue) across 7 phases. This spec restructures that into a chapter-by-chapter approach so that each chapter can be reviewed as a complete unit with all its interactions. The trade-off is more context-switching between library APIs, but the benefit is end-to-end narrative review at each step.
+
 | Chapter | Components |
 |---------|-----------|
 | Ch 0: The Thread | #1 FibreStrandHero, #2 FibreScaleCounter |
@@ -118,6 +139,12 @@ Full component specifications are in `docs/site-plan/components.md`.
 | Ch 7: The Hinge | #31 GeopoliticalMap, #32 UBICalculator, #33 RegulatoryTimeline, #34 FibreStrandCallback |
 
 Each component must pass the component build checklist (see Section 5) before moving to the next.
+
+**Per-chapter performance check:** After completing each chapter's components, run a Lighthouse audit on that chapter page. Chapters 2 and 4 (6 components each, heaviest library usage) are the most likely to degrade performance — catch regressions chapter-by-chapter rather than deferring to Phase 5.
+
+**Component communication pattern:** Components that need to coordinate (e.g., FibreStrandHero + FibreScaleCounter sharing scroll position in Ch 0, or FourPhaseTimeline + ClosureProblemSlider in Ch 4) should use `CustomEvent` dispatch on `window`. This works across Vue islands and vanilla Astro `<script>` components without coupling them.
+
+**FibreScaleCounter (#2) type decision:** Despite being listed as a Vue island in the file tree, this component has no reactive state — it passively animates in sync with scroll position. It should be built as a vanilla Astro component (`src/components/vanilla/chapter-00/FibreScaleCounter.astro`) using `requestAnimationFrame` and a `CustomEvent` listener, avoiding unnecessary Vue hydration overhead.
 
 **Deliverable:** Feature-complete site with all interactive components. Deployable.
 
@@ -162,11 +189,20 @@ Each component must pass the component build checklist (see Section 5) before mo
 
 Each real-world entity maps to exactly one fictional name, used consistently across all chapters, data files, and components. The canonical mapping lives in `docs/narrative/characters-and-voices.md` — this is the single source of truth.
 
-### Known Mappings
-- Google / DeepMind / Alphabet → **Prometheus Labs**
-- TSMC → **Titan Semiconductor**
-- ASML → **Lumen Optics**
-- Meridian Dynamics, Helix Robotics, Longbow Systems, Atlas Heavy Industries, Corvus Energy → assigned to other real entities as needed
+### Canonical Mapping
+
+The full mapping from `docs/narrative/characters-and-voices.md`:
+
+| Real Entity | Fictional Name | Narrative Role |
+|-------------|---------------|----------------|
+| Google / DeepMind / Alphabet | **Prometheus Labs** | Dominant AI org and likely ASI incubator |
+| TSMC | **Titan Semiconductor** | Dominant chip foundry, advanced packaging chokepoint |
+| ASML | **Lumen Optics** | EUV lithography monopolist ($400M machines) |
+| NVIDIA | **Meridian Dynamics** | Dominant AI chip designer, 70-80% of packaging capacity |
+| Boston Dynamics / Figure / similar | **Helix Robotics** | Leading Western humanoid robotics manufacturer |
+| Unitree / similar Chinese firms | **Longbow Systems** | Chinese robotics, sub-$15k humanoids |
+| SpaceX | **Atlas Heavy Industries** | Reusable launch vehicles for lunar bootstrapping |
+| NuScale / Oklo / similar | **Corvus Energy** | SMR companies pursuing data centre power |
 
 ### Rules
 - Any new real entity encountered during prose or data authoring gets assigned a fictional name and added to the canonical mapping **before** being used anywhere
@@ -196,9 +232,32 @@ Every interactive component must pass all of the following before it is consider
 
 ---
 
-## 6. Data & Content Strategy
+## 6. Testing Strategy
 
-### JSON Data Files (30 files)
+### Playwright MCP E2E Verification
+
+Playwright is accessed via the MCP (Model Context Protocol) server during development — not as a CI test suite, but as an interactive verification tool used when building each component.
+
+**What to verify per component:**
+- Key interactive behaviours (click, scroll trigger, slider input) produce expected visual state
+- Responsive layout at 375px and 1280px viewports
+- Dark mode rendering (toggle and verify)
+- JS-disabled fallback (disable JS, verify static content renders)
+- Scroll-driven animations trigger at correct scroll positions
+
+**When to use:**
+- After building each interactive component (Phase 3)
+- During dark mode audit (Phase 5)
+- During mobile audit (Phase 5)
+- For regression checks when modifying shared styles or layouts
+
+**Test files are not persisted** — Playwright MCP is used interactively during development, not as an automated test suite. If automated e2e tests become needed later, they would live in a `tests/e2e/` directory.
+
+---
+
+## 7. Data & Content Strategy
+
+### JSON Data Files (30 application files + 1 TopoJSON boundary file)
 - Authored in Phase 1 from research summaries
 - All real company names replaced with fictional equivalents per Section 4
 - Numerical precision preserved from research (no rounding)
@@ -210,6 +269,11 @@ Every interactive component must pass all of the following before it is consider
 - User generates via Nano Banana in Phase 4
 - Integrated with Astro image optimization, WebP, responsive srcset, lazy loading, alt text
 
+### AI-Generated Image Prompts
+- The master reference is `docs/site-plan/image-prompts.md` which contains all prompt text inline
+- Individual prompt files in `docs/prompts/images/` are derived from it for use with the Nano Banana generation tool
+- The shared style prompt (`docs/prompts/images/shared-style.md`) is prepended to each individual chapter prompt
+
 ### Prose Content (~18,900 words)
 - Drafted in Phase 2 from research summaries + narrative plan + PROPOSAL.md
 - No trademarked names — fictional replacements per canonical mapping
@@ -217,9 +281,23 @@ Every interactive component must pass all of the following before it is consider
 - Placeholder comments for interactive elements
 - User reviews and revises before Phase 3
 
+Per-chapter word count targets (from `docs/narrative/chapters.md`):
+
+| Chapter | Title | Words | Interactive Elements |
+|---------|-------|-------|---------------------|
+| 0 | The Thread | ~400 | 2 |
+| 1 | The Weight of Light | ~2,500 | 5 |
+| 2 | Built by Hand | ~3,000 | 6 |
+| 3 | The Patient Mind | ~2,500 | 3 |
+| 4 | The Roadmap | ~3,500 | 6 |
+| 5 | The Right to Own a God | ~2,500 | 4 |
+| 6 | The Gardener | ~2,500 | 4 |
+| 7 | The Hinge | ~2,000 | 4 |
+| **Total** | | **~18,900** | **34** |
+
 ---
 
-## 7. Reference Documents
+## 8. Reference Documents
 
 | Document | Location | Purpose |
 |----------|----------|---------|

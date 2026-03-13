@@ -49,7 +49,7 @@ D3 and GSAP both manipulate inline styles extensively. CSP must accommodate this
 
 | Type | Location | Purpose | Count |
 |------|----------|---------|-------|
-| Astro static | `src/components/astro/` | Static UI: headers, callouts, navigation, badges | 10 |
+| Astro static | `src/components/astro/` | Static UI: headers, callouts, navigation, badges | 11 |
 | Vanilla JS | `src/components/vanilla/` | GSAP + D3 components via Astro `<script>` tags | 20 |
 | Vue islands | `src/components/vue/` | Complex stateful: quizzes, calculators, explorable models | 14 |
 
@@ -153,14 +153,15 @@ Each component must pass the component build checklist (see Section 5) before mo
 **Goal:** Visually complete site with all images integrated and design polish applied.
 
 **Steps:**
-1. User generates images via Nano Banana from prompts in `docs/prompts/images/`
-2. Integrate images using `<Figure>` component with Astro image optimization (`astro:assets`)
-3. Generate WebP variants, responsive `srcset`, lazy loading, correct `width`/`height`
-4. Add OG share image
-5. Chapter transition animations (GSAP crossfade between sections)
-6. Typography polish (widows/orphans, `clamp()` sizing, technical term styling)
-7. Wire CrossRef links between chapters for recurring concepts
-8. Audit all DeepDive sections for content completeness
+1. Create individual prompt files in `docs/prompts/images/chapter-XX/` from master prompts in `docs/site-plan/image-prompts.md`, prepending `shared-style.md` to each
+2. User generates images via Nano Banana from prompts in `docs/prompts/images/`
+3. Integrate images using `<Figure>` component with Astro image optimization (`astro:assets`)
+4. Generate WebP variants, responsive `srcset`, lazy loading, correct `width`/`height`
+5. Add OG share image
+6. Chapter transition animations (GSAP crossfade between sections)
+7. Typography polish (widows/orphans, `clamp()` sizing, technical term styling)
+8. Wire CrossRef links between chapters for recurring concepts
+9. Audit all DeepDive sections for content completeness
 
 **Deliverable:** Visually complete, polished site. Deployable.
 

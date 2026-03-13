@@ -7,4 +7,126 @@ estimatedMinutes: 10
 description: "The physical reality of AI infrastructure — power, water, and the limits of silicon."
 ---
 
-*Chapter content will be drafted in Phase 2.*
+import Callout from '../../components/astro/Callout.astro';
+import StatHighlight from '../../components/astro/StatHighlight.astro';
+import DeepDive from '../../components/astro/DeepDive.astro';
+import CrossRef from '../../components/astro/CrossRef.astro';
+import FictionBadge from '../../components/astro/FictionBadge.astro';
+
+## The Largest Construction Project in History
+
+Follow that strand of glass outward, past the spool and through the factory wall, and you arrive at a building site. Then another. Then another. Nearly 3,000 data centres are under construction or planned across the United States alone. Globally, the figure is higher, harder to pin down, and climbing every quarter. The industry is attempting to double its entire installed footprint within five years.
+
+The numbers attached to this buildout tend to lose their meaning the moment you read them. So consider this one carefully.
+
+<StatHighlight value="1.3" unit="%" label="of US GDP now flowing into AI infrastructure, exceeding the Apollo and Manhattan programmes combined" />
+
+That figure captures only the direct capital expenditure: the land, the concrete, the cooling systems, the racks of silicon. It does not include the power generation, the transmission upgrades, the water infrastructure, or the supply chain expansion required to feed the sites once they are built. Industry analysts project the global total could reach $7 trillion by the end of the decade. Seven trillion dollars is more than the GDP of every country on Earth except the United States and China.
+
+{/* PHASE 3: InfrastructureComparator — scroll-driven bar chart, AI spending vs Apollo/Manhattan/Highways */}
+
+We are accustomed to thinking of large infrastructure programmes in the past tense, as historical achievements sealed in museum exhibits. The Interstate Highway System. The Apollo programme. The Manhattan Project. Each was considered, in its time, the most ambitious undertaking a nation had ever attempted. The current AI buildout dwarfs all three combined, and it is happening not over decades but within a single business cycle, driven not by government mandate but by private capital competing for a market that does not yet fully exist.
+
+What makes this different from previous construction booms is the load profile. A warehouse full of traditional servers draws power in waves, rising with daytime traffic and falling overnight. An AI training cluster does not sleep. It runs at 80 to 100 percent capacity around the clock, every day, pulling power with the constancy of an aluminium smelter. A single AI campus can draw one gigawatt of continuous electricity. That is the entire consumption of a mid-sized city: every streetlight, every hospital, every refrigerator, every air conditioner, all at once, all the time. Several facilities under construction in the US are designed to exceed that threshold. One planned campus in the American southwest would draw over three gigawatts, roughly the output of three large nuclear power stations running flat out.
+
+This is not a metaphor. These are buildings, being built right now, that will consume more electricity than the cities they sit beside.
+
+## The Grid Was Not Built for This
+
+For decades, US electricity demand was essentially flat. Grid operators planned around modest, predictable growth. New power lines and substations were approved on timelines measured in years, not months. The system worked because nothing changed very fast.
+
+That era ended abruptly. Between 2022 and 2025, the five-year forecast for US peak electricity demand surged sixfold.
+
+{/* PHASE 3: DemandSurgeChart — D3 bar chart that "breaks" its y-axis, 24→166 GW */}
+
+In 2022, grid planners projected 24 gigawatts of new peak demand over the following five years. By 2025, that projection had been revised to 166 gigawatts. Data centres account for roughly 55 percent of the increase, or about 90 gigawatts. To meet this growth, generation and transmission capacity must be built at more than six times the rate of recent history. The grid that took a century to construct must, in effect, be duplicated in fifteen to twenty years.
+
+The mismatch between how fast data centres can be financed and how fast the grid can adapt is already producing consequences.
+
+<Callout type="stat">
+In July 2024, a single voltage fluctuation in northern Virginia caused 60 data centres to disconnect simultaneously, pushing 1,500 megawatts of surplus power back onto the grid. The region narrowly avoided a cascading blackout. Northern Virginia hosts the densest concentration of data centres on Earth. The machines were already powerful enough to destabilise the infrastructure they depend on.
+</Callout>
+
+Sixteen gigawatt-scale data centre campuses, aggregating to nearly 30 gigawatts, are scheduled to come online in 2026 and 2027. Each of these facilities needs a dedicated connection to the high-voltage transmission network, and each connection requires regulatory approval, environmental review, and physical construction of power lines and substations. The queue of projects waiting for grid interconnection is now measured in years. Data centres can be built in months. The power to run them cannot.
+
+The response from federal authorities has been to treat AI power supply as a national security priority, bypassing environmental reviews and overriding local permitting disputes. Over 300 data-centre-related bills have been filed across more than 30 US states. The UK has reclassified large data centres as Critical National Infrastructure, stripping local communities of the power to block them. Governments are not debating whether to build this infrastructure. They are debating how fast existing rules can be dismantled to make way for it.
+
+## Five Million Gallons a Day
+
+There is a cost to keeping all of this silicon cool that rarely appears in the headlines.
+
+Every processor generates heat. At the densities required for AI training, where a single rack can draw 50 to 100 kilowatts (ten times the load of a traditional server rack), removing that heat is not an engineering detail. It is the central design challenge of the building. The most energy-efficient method, still dominant in most facilities, is evaporative cooling: water is sprayed across heat exchangers, absorbs thermal energy, and evaporates. The physics are simple and effective. The water bill is not.
+
+A mid-sized data centre consumes roughly 300,000 gallons of fresh water every day. A hyperscale AI training facility can use up to five million gallons, the daily supply of a town of 50,000 people, evaporated into the atmosphere and gone.
+
+<Callout type="stat">
+Every 10 to 50 responses from an advanced AI model evaporate approximately 500 millilitres of fresh water. A standard bottle. If you have asked an AI model a few dozen questions today, the cooling systems that kept the processors from overheating while answering you consumed about as much water as you will drink before bed.
+</Callout>
+
+{/* PHASE 3: WaterCostCalculator — user enters query count, sees water volume */}
+
+US data centre water consumption is projected to reach 150 to 280 billion litres annually by 2028, two to four times the 2023 level. In Texas, where the combination of cheap land, tax incentives, and lax regulation has attracted one of the densest clusters of new facilities, data centres could consume 2.7 percent of the entire state water supply by 2030. Texas already faces a projected statewide shortage of 1.6 trillion gallons by that date. The data centres are not causing the shortage, but they are arriving at the worst possible moment, adding a new and rapidly growing demand to a system already under strain.
+
+There is a bitter irony embedded in the engineering. Optimising a data centre for energy efficiency, reducing the electricity consumed per unit of computation, directly worsens its water efficiency. The most energy-efficient cooling methods are the most water-intensive. Every kilowatt-hour saved by evaporative cooling is a gallon of water lost. The two constraints pull in opposite directions, and there is no free path between them.
+
+## The Million-to-One Gap
+
+Set the infrastructure aside for a moment. Forget the construction sites, the power lines, the water rights. Consider instead the most fundamental constraint of all: the physics of thinking in silicon.
+
+Your brain is running right now on roughly 20 watts. That is less than a dim light bulb. With that power budget, it sustains consciousness, parses language, navigates social complexity, plans for the future, and experiences the smell of coffee. It does this using approximately 86 billion neurons connected by trillions of synapses, consuming about as much energy as a laptop charger.
+
+The most powerful supercomputer on Earth, designed to perform equivalent calculations, consumes 21 megawatts. That is enough electricity to power thousands of homes.
+
+<StatHighlight value="1,000,000" unit="×" label="more energy consumed by a supercomputer to match the computational output of a single human brain" />
+
+{/* PHASE 3: BrainVsSilicon — visual balance, 20W lightbulb vs 21MW power station */}
+
+One million times more power for roughly equivalent raw computation. The gap is so large it is difficult to reason about, so consider what it means in practice: a single complex AI response can require over 6,000 joules of energy. In the same second, your brain burns 20 joules and does something no AI system can yet replicate, which is to be aware that it is doing anything at all.
+
+This is not a temporary engineering problem awaiting a clever fix. It reflects a deep structural difference between biological and silicon computation. Neurons are slow, individually unreliable, and energy-efficient beyond anything we know how to build. Transistors are fast, precise, and thermodynamically extravagant. The brain computes through massive parallelism at near-zero voltage. Silicon computes through serial speed at industrial wattage.
+
+<DeepDive title="The Erasi Equation">
+What would it take to replace human cognitive labour entirely with silicon? The calculation is straightforward but its result is staggering. One research team estimated that simulating a single human brain in real time, using current silicon architecture, would require 2.7 gigawatts of continuous power: over 100 million times what the biological brain consumes.
+
+Scaling that to all 8 billion humans yields a power requirement roughly 1,000 times the total generating capacity of the United States. Not 1,000 times current data centre consumption. One thousand times every power plant, every dam, every solar farm, every wind turbine in the country, combined.
+
+This figure, sometimes called the Erasi Equation, is not a prediction of what will happen. It is a measure of the distance between where silicon is now and where it would need to be. It establishes, with arithmetic, that brute-forcing the replacement of human cognition on current hardware is not merely expensive. It is physically impossible.
+
+The only viable path forward is radical improvement in what researchers call "intelligence per watt": doing more computation with less energy, through algorithmic efficiency, neuromorphic hardware that mimics the brain's low-power architecture, or photonic computing that replaces electrical signals with light. Each of these approaches is real. None is ready.
+</DeepDive>
+
+The AI chip designer <FictionBadge name="Meridian Dynamics" /> currently dominates the market for the accelerators that power AI training and inference, having locked up 70 to 80 percent of the world's advanced chip packaging capacity. The research lab <FictionBadge name="Prometheus Labs" />, which operates what is likely the largest privately held AI compute cluster on Earth, designs its own custom silicon for internal use and is aggressively expanding its data centre footprint, including private fibre networks and, increasingly, its own power generation. These are not software companies in any traditional sense. They are energy companies, construction companies, and materials companies that happen to write code.
+
+The inference market alone, the cost of running trained models to answer questions and generate output, is projected to reach $255 billion annually by 2030. Inference already accounts for 80 to 90 percent of all AI compute. By 2028, AI inference could consume 165 to 326 terawatt-hours of electricity per year, enough to power 22 percent of all US households. Every time you ask an AI to summarise an email or generate an image, you are drawing from this pool. The pool is growing faster than anyone expected.
+
+## The Paradox That Swallows Efficiency
+
+There is a comforting story that runs through much of the public conversation about AI's energy appetite. It goes like this: hardware gets more efficient every year. Software gets more efficient every year. Eventually, the energy cost per unit of intelligence will fall to something manageable, and the crisis will resolve itself.
+
+This story has a name. It was identified in 1865 by the economist William Stanley Jevons, who observed that improvements in the efficiency of coal-burning steam engines did not reduce total coal consumption. They increased it, because cheaper energy per unit of work made it economical to do vastly more work. The pattern has repeated in every energy-intensive industry since.
+
+<Callout type="insight">
+Over the past decade, engineers achieved a thousandfold improvement in AI hardware energy efficiency. In the same period, the total energy required to train AI models increased by a factor of one thousand. The gains were real. They were consumed entirely by induced demand. Every improvement in efficiency made it feasible to train larger models on more data for longer periods. The ceiling rose, and the ambition rose to meet it.
+</Callout>
+
+{/* PHASE 3: JevonsParadox — dual-axis chart, efficiency vs total training energy */}
+
+This is the Jevons Paradox applied to intelligence itself. Making thinking cheaper does not lead to less thinking. It leads to more thinking, and to the discovery of problems that were previously too expensive to attempt. The trajectory points in only one direction: upward. Economic modelling suggests that AI-driven productivity gains, if they match post-war historical averages, could add a cumulative $10 trillion to US GDP over the coming decade. That growth would itself induce the energy equivalent of roughly five billion barrels of oil in additional demand.
+
+Efficiency is not an escape hatch. It is an accelerant.
+
+This is the paradox at the heart of the AI infrastructure buildout. We are constructing the largest energy-consuming system in human history, and the better it works, the more energy it will need. Every breakthrough in efficiency does not relieve the pressure on the grid; it justifies the next wave of construction. The system feeds on its own success.
+
+## What the Weight Tells Us
+
+Pull back far enough and a picture emerges.
+
+The AI revolution is not happening in the cloud. It is happening in the ground: in trenches cut for fibre, in riverbeds drawn down for cooling water, in copper mines where the ore grade has declined 40 percent since 1991 and each tonne of metal takes more energy to extract than the last. It is happening on power grids designed for a world that no longer exists, straining under a load they were never meant to carry. It is happening in construction yards where 4,000 workers commute to a single site and lose two hours a day just getting from the car park to their work zone.
+
+The scale of what is being built is genuinely without precedent. Not metaphorically. The capital committed, the energy demanded, the water consumed, and the land transformed exceed any single infrastructure programme in recorded history. And the physics of silicon thinking guarantee that this is not a temporary surge. The gap between what we are building and what the human brain achieves for 20 watts will drive the buildout forward for decades, either toward some radical breakthrough in efficiency or toward an energy system so vast it reshapes the physical landscape of the planet.
+
+None of this is secret. The construction permits are public. The power purchase agreements are filed with regulators. The water draw-down reports are in state databases. The numbers are available to anyone who looks. Most people have simply never had a reason to look.
+
+Now consider who is doing the building. If the demand is this staggering, if the physics are this unforgiving, if the grid is already buckling under the weight of what exists today, then the next question is: who are the people actually assembling this infrastructure, what are the materials they need, and what happens when both run short?
+
+<CrossRef chapter={2} slug="built-by-hand" label="Chapter 2: Built by Hand" />

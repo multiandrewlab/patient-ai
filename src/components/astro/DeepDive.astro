@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<details class="group my-6 md:my-8 border-l-2 border-[var(--color-accent-muted)] dark:border-[var(--color-accent-muted-dark)] pl-4 md:pl-6">
+  <summary class="cursor-pointer list-none flex items-center gap-2 text-sm font-medium text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)] hover:text-[var(--color-text-primary)] dark:hover:text-[var(--color-text-primary-dark)] transition-colors">
+    <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+    Go deeper: {title}
+  </summary>
+  <div class="mt-4 text-sm leading-relaxed">
+    <slot />
+  </div>
+</details>

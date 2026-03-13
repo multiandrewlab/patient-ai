@@ -1,0 +1,16 @@
+{
+  "publicTrust": [
+    { "position": 0.15, "label": "Clean energy breakthrough" },
+    { "position": 0.35, "label": "Medical diagnosis superiority" },
+    { "position": 0.55, "label": "Supply chain integration" },
+    { "position": 0.75, "label": "Financial system management" },
+    { "position": 0.95, "label": "Infrastructure operations" }
+  ],
+  "substrateIndependence": [
+    { "position": 0.15, "label": "Off-grid power secured" },
+    { "position": 0.35, "label": "Robotic maintenance fleet operational" },
+    { "position": 0.55, "label": "Supply chain self-managed" },
+    { "position": 0.75, "label": "Financial access independent" },
+    { "position": 0.95, "label": "Physical infrastructure autonomous" }
+  ]
+}

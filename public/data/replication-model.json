@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "seedMassMT": 100,
+    "earthImportMTperYear": 50,
+    "replicationYears": 3
+  },
+  "ranges": {
+    "seedMass": { "min": 63, "max": 145, "_note": "63.1-145.6 MT based on 1-2 Atlas Heavy Industries descent payloads; theoretical minimum from modelling is 12-41 MT over 20 years but ASI-backed redundant estimate used" },
+    "earthImport": { "min": 10, "max": 200 },
+    "replicationTime": { "min": 1, "max": 10 }
+  },
+  "simulationYears": 40,
+  "seedPowerRequirementMW": {
+    "min": 0.47,
+    "max": 11.5,
+    "_note": "Continuous power requirement for 100 MT/year replication rate"
+  },
+  "closurePercent": {
+    "phase2": { "inSitu": 85, "earthImport": 15 },
+    "phase3": { "inSitu": 95, "earthImport": 5 },
+    "phase4": { "inSitu": 100, "earthImport": 0, "_note": "Near-100% closure achieved approximately by 2060" }
+  },
+  "keyMilestone": {
+    "description": "Off-world production eclipses total Earth-launched mass",
+    "approximateYear": 2052,
+    "_note": "Derived from exponential doubling model; exact crossover year sensitive to replication time and import cadence assumptions"
+  },
+  "note": "Growth model: exponential doubling each replicationYears period. Earth import: linear accumulation. A single seed can eventually yield millions of times the industrial capacity of the United States with zero further Earth investment."
+}

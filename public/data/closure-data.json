@@ -1,0 +1,47 @@
+[
+  {
+    "phase": "Phase II (2035-2045)",
+    "earthPercent": 15,
+    "inSituPercent": 85,
+    "callouts": [
+      {
+        "material": "Boron",
+        "reason": "No significant lunar deposits; critical for semiconductor doping (silicon solar cell dopant). A single 100 MT Atlas Heavy Industries payload of refined boron could sustain production of hundreds of gigawatts of locally manufactured lunar solar panels."
+      },
+      {
+        "material": "Phosphorus",
+        "reason": "Trace quantities only in lunar regolith; required as silicon solar cell dopant alongside boron"
+      },
+      {
+        "material": "Gallium, Indium, Germanium",
+        "reason": "Lunar regolith severely deficient in these semiconductor precursors; China export controls make Earth sourcing geopolitically sensitive"
+      },
+      {
+        "material": "Precision ICs",
+        "reason": "Sub-5nm fabrication requires Earth-based advanced packaging — Titan Semiconductor CoWoS process; orbital microfabrication not yet mature"
+      }
+    ]
+  },
+  {
+    "phase": "Phase III (2045-2060)",
+    "earthPercent": 5,
+    "inSituPercent": 95,
+    "callouts": [
+      {
+        "material": "Boron",
+        "reason": "Still Earth-sourced; asteroid prospecting for boron-bearing carbonaceous chondrites underway"
+      },
+      {
+        "material": "Biological compounds",
+        "reason": "Some organic chemistry precursors still require Earth-origin synthesis for specialised applications"
+      }
+    ]
+  },
+  {
+    "phase": "Phase IV (2060+)",
+    "earthPercent": 0,
+    "inSituPercent": 100,
+    "callouts": [],
+    "_note": "Near-100% material closure achieved approximately by 2060 via orbital microfabrication maturation and asteroid prospecting"
+  }
+]

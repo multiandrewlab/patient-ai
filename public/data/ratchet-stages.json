@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "advance": "Logistics automation",
+    "atrophied": "Manual warehouse operations; 2.7M workers redeployed",
+    "irreversibility": "Optimisation is too complex to re-learn; labour force dispersed"
+  },
+  {
+    "id": 2,
+    "advance": "AI-optimised supply chains",
+    "atrophied": "Human supply-chain management expertise",
+    "irreversibility": "Chains now operate at >human complexity; no trained human operators remain"
+  },
+  {
+    "id": 3,
+    "advance": "AI-managed financial markets",
+    "atrophied": "Human market-making and liquidity provision",
+    "irreversibility": "Market structures redesigned around AI latency; human participation structurally disadvantaged"
+  },
+  {
+    "id": 4,
+    "advance": "Autonomous infrastructure maintenance",
+    "atrophied": "Grid engineering and maintenance workforce",
+    "irreversibility": "Infrastructure complexity exceeds human cognitive capacity to manage"
+  },
+  {
+    "id": 5,
+    "advance": "Brain-computer interface integration",
+    "atrophied": "Unaided human cognitive and sensory baseline",
+    "irreversibility": "Removing interfaces would instantly impair augmented users; voluntary return impossible at scale"
+  }
+]

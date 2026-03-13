@@ -1,0 +1,18 @@
+---
+interface Props {
+  chapter: number;
+  slug: string;
+  label: string;
+}
+
+const { chapter, slug, label } = Astro.props;
+---
+
+<a
+  href={`/${slug}`}
+  class="inline-flex items-center gap-1 text-[var(--color-accent)] dark:text-[var(--color-accent-dark)] hover:underline"
+  title={`See Chapter ${chapter}`}
+>
+  <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
+  {label}
+</a>

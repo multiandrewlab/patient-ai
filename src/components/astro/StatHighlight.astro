@@ -1,0 +1,18 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  unit?: string;
+}
+
+const { value, label, unit } = Astro.props;
+---
+
+<div class="my-8 md:my-12 text-center">
+  <p class="font-bold leading-none text-[var(--color-accent)] dark:text-[var(--color-accent-dark)]" style="font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem)">
+    {value}{unit && <span class="text-[0.4em] font-normal ml-1" style="font-family: var(--font-body)">{unit}</span>}
+  </p>
+  <p class="mt-2 text-sm md:text-base text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)] max-w-md mx-auto">
+    {label}
+  </p>
+</div>

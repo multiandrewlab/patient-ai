@@ -1,0 +1,22 @@
+---
+interface Props {
+  chapter: number;
+  act: string;
+  title: string;
+  estimatedMinutes: number;
+}
+
+const { chapter, act, title, estimatedMinutes } = Astro.props;
+---
+
+<header class="mb-12 md:mb-16">
+  <p class="text-sm uppercase tracking-widest text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)] mb-2" style="font-family: var(--font-body)">
+    Act {act} &middot; Chapter {chapter}
+  </p>
+  <h1 class="font-bold leading-tight mb-4" style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 4.5rem)">
+    {title}
+  </h1>
+  <p class="text-sm text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)]">
+    {estimatedMinutes} min read
+  </p>
+</header>

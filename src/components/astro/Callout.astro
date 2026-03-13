@@ -1,0 +1,19 @@
+---
+interface Props {
+  type?: 'stat' | 'quote' | 'insight';
+}
+
+const { type = 'insight' } = Astro.props;
+
+const styles: Record<string, { border: string; bg: string }> = {
+  stat: { border: 'border-l-blue-500', bg: 'bg-blue-50 dark:bg-blue-950/30' },
+  quote: { border: 'border-l-amber-500', bg: 'bg-amber-50 dark:bg-amber-950/30' },
+  insight: { border: 'border-l-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-950/30' },
+};
+
+const s = styles[type];
+---
+
+<aside class={`border-l-4 ${s.border} ${s.bg} p-4 md:p-6 my-6 md:my-8 rounded-r-lg`}>
+  <slot />
+</aside>

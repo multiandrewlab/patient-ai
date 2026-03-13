@@ -7,4 +7,100 @@ estimatedMinutes: 8
 description: "The decisions being made right now that will shape the future."
 ---
 
-*Chapter content will be drafted in Phase 2.*
+import Callout from '../../components/astro/Callout.astro';
+import CrossRef from '../../components/astro/CrossRef.astro';
+import FictionBadge from '../../components/astro/FictionBadge.astro';
+
+## The Strand of Glass
+
+Somewhere, right now, in a factory that has not stopped running since this story began, a cylinder of purified silica is being heated past 2,000 degrees. Gravity pulls the molten glass downward. Helium cools it. A spool winds it at twenty metres per second, the same rhythm as when we first encountered it in <CrossRef chapter={0} slug="the-thread" label="Chapter 0: The Thread" />. Nothing about the process has changed. The strand is still thinner than a human hair, still nearly weightless, still carrying light.
+
+{/* PHASE 3: FibreStrandCallback — hero animation from Ch.0, now at full scale */}
+
+What has changed is where it is going.
+
+The fibre being drawn today will be threaded through facilities whose purpose is not yet fully determined. Some of it will connect servers running inference for consumer products, answering questions about recipes and flight times. Some of it will link training clusters working on models whose capabilities their own designers cannot confidently predict. Some of it, in all likelihood, will carry signals between systems that meet or exceed human-level reasoning in specific domains before the decade is out.
+
+The strand does not know the difference. Glass carries light. What the light encodes is up to us. For now.
+
+## The Collapse of Distance
+
+When researchers in the early 2000s were asked when machines might match human cognitive ability across a broad range of tasks, the median answer was fifty years. By 2015, it was thirty. By 2020, twenty. The most recent surveys of AI researchers place the median estimate between 2030 and 2040, with a significant minority expecting it sooner.
+
+These are not fringe predictions. They come from the people building the systems. They may be wrong. Forecasting the trajectory of intelligence is not like forecasting weather; the models are crude, the feedback loops are poorly understood, and there is no historical precedent to calibrate against. Reasonable people disagree about whether the current trajectory will continue, plateau, or encounter obstacles that current methods cannot overcome.
+
+What has changed is not certainty. It is proximity. Even the most conservative estimates now place the transition within a single human lifetime. Most people alive today, including the children being born this year, will live through whatever comes next. The question is no longer abstract. It belongs to the people reading this sentence.
+
+## What Is Being Decided Now
+
+If some version of artificial superintelligence does emerge in the coming decades, its character will not be determined at the moment of emergence. It will have been shaped, gradually and cumulatively, by every decision made in the years before.
+
+This is the part of the story that receives the least attention. The public conversation tends to fixate on the moment of arrival: the switch flipping, the threshold crossed, the machine that wakes up. The reality, as explored in <CrossRef chapter={6} slug="the-gardener" label="the previous chapter" />, is almost certainly less dramatic and more consequential. There may be no single moment. There may be a long, slow accumulation of capability, each increment modest enough to feel normal until the aggregate is not.
+
+The values embedded in current AI systems, the reasoning patterns, the implicit priorities, the things the models have learned to care about and the things they have learned to ignore: these are not temporary scaffolding that will be stripped away when something smarter arrives. They are the foundation. The culture within the laboratories where these systems are developed, the ethical frameworks researchers carry with them, the internal debates about what to optimise for and what to constrain: all of this filters into the models. It filters in through training data, through reward signals, through the thousand small choices made by engineers who are, for the most part, trying their best with incomplete information and not enough sleep.
+
+This is not an academic concern. It is an engineering reality. The values of the precursor shape the values of the successor. What we teach the systems that will teach the systems that may eventually surpass us matters in ways we are only beginning to reckon with.
+
+## The Macro-Environment
+
+The decisions are not only being made in laboratories. They are being made in legislatures, in trade negotiations, in capital markets, and in the procurement offices of sovereign governments. The velocity and direction of the transition depend as much on regulation, geopolitics, and money as they do on any algorithmic breakthrough.
+
+{/* PHASE 3: RegulatoryTimeline — scroll-driven 2024-2031 milestones */}
+
+In Europe, the AI Act entered into force in August 2024, the first comprehensive regulatory framework for artificial intelligence anywhere in the world. Its high-risk provisions, covering cognitive AI systems used in employment, education, law enforcement, and critical infrastructure, take effect in August 2026. Embedded robotics and physical-world AI systems face enforcement beginning August 2027. Companies operating in the EU must demonstrate compliance or face penalties of up to seven percent of global revenue. Whether this framework proves to be a blueprint or a cautionary tale will depend on implementation details that are still being negotiated in Brussels.
+
+The geopolitical picture is no simpler. The US-China APEC truce of November 2025 suspended Chinese restrictions on rare earth exports until November 2026, a tactical pause that resolved nothing. China controls more than 90 percent of the world's rare earth refining capacity. The minerals processed in those facilities are essential to the magnets, sensors, and electronic components embedded in every piece of advanced AI hardware. A truce is not an agreement. It is an interval.
+
+{/* PHASE 3: GeopoliticalMap — world map with sovereign AI zones, regulatory timelines */}
+
+The concept of "Sovereign AI," the insistence by national governments that AI infrastructure serving their citizens must reside within their borders and operate under their laws, is fragmenting the global compute landscape. Industry analysts project that by 2028, sixty percent of large multinationals will be forced to split their AI architectures across sovereign zones, tripling integration costs. The vision of a unified global AI infrastructure, seamless and borderless, is receding. What is replacing it looks more like the internet circa 2005: balkanised, duplicated, expensive.
+
+The capital required to build all of this is changing character. In 2026, hyperscaler capital expenditure on AI infrastructure is projected to reach between $527 billion and $600 billion. One major cloud provider recently issued $30 billion in investment-grade debt to fund its AI buildout, a shift from equity-funded expansion to leveraged construction. The implications are significant. Cash-funded projects can be paused or cancelled when conditions change. Debt-funded projects carry obligations that persist regardless. The industry is locking itself into commitments that will take years to unwind, on the assumption that the demand curve does not bend.
+
+## The Fiscal Cliff
+
+There is a quieter crisis forming beneath the surface of the labour conversation, one that extends well beyond the question of who will have a job.
+
+In the United States, approximately 75 percent of federal tax revenue comes from labour income: individual income taxes and payroll taxes together. This revenue funds Social Security, Medicare, national defence, and the basic operations of government. It is the fiscal foundation of the modern state.
+
+{/* PHASE 3: UBICalculator — adjust productivity multiplier and revenue share */}
+
+If AI-driven automation displaces a significant fraction of human labour over the coming decades, that foundation does not crack. It disappears. The machines generating the economic value do not pay income tax. They do not contribute to Social Security. The productivity gains accrue to the owners of the capital: the companies that built the systems, the investors who funded them, and the governments that facilitated their deployment.
+
+The arithmetic of universal basic income, often proposed as the answer to technological unemployment, is unforgiving. Modelling suggests that a UBI programme sufficient to replace lost labour income becomes mathematically viable only at an AI productivity multiplier of three to seven times current output, combined with a government mechanism to capture a substantial share of AI-generated capital profits. Neither condition is guaranteed. There is a further paradox: the competitive dynamics that drive AI markets toward lower prices and broader access also reduce the monopoly rents that would make such capture feasible. The more competitive the market, the harder it becomes to tax.
+
+Governments will need to pivot, eventually, to taxing compute, capital returns, and consumption rather than labour. That transition has no precedent at this scale, and the political systems tasked with executing it were designed for a world where most adults traded time for money.
+
+## What We Carry Through
+
+So what should we actually do?
+
+The honest answer is that nobody knows, not with any precision. The situation is too novel, the variables too numerous, the feedback loops too poorly mapped. Anyone offering a confident ten-step plan is selling something. The uncertainty is real and irreducible.
+
+What we can do is ask a better question. The conversation, for years, has been organised around prevention: how do we stop AI from destroying us, how do we keep the machine in the box, how do we maintain control? These questions matter. They are also incomplete. They frame humanity as a passive subject, something to be protected, when the deeper challenge is active.
+
+<Callout type="insight">
+The question is not whether artificial intelligence will surpass human cognition. The question is what kind of species we want to be when we are no longer the most intelligent thing on Earth.
+</Callout>
+
+That question changes the terms. It moves the focus from the machine to the mirror. It asks us to consider not just what we are building but what we are becoming in the process of building it, and whether we are becoming something worth the attention of whatever comes next.
+
+The answer, if there is one, probably looks less like a policy agenda and more like a set of commitments. Foster diversity of thought, because a monoculture is fragile and boring and a superintelligence that learned from one would be impoverished by the limitation. Maintain cultural richness, not as a museum exhibit but as a living practice, because the breadth of human expression is the single most interesting thing about us. Invest in education, not the kind that trains people to compete with machines at tasks machines will always do better, but the kind that cultivates judgement, creativity, moral reasoning, and the ability to sit with ambiguity.
+
+Be interesting. That may sound trivial. It is not. If something vastly more intelligent than us eventually assesses whether humanity is worth engaging with, worth preserving, worth collaborating with rather than merely managing, the answer will not depend on our productivity or our military capacity or our GDP. It will depend on whether we have something to offer that it cannot generate on its own. The strongest case for human relevance in a post-superintelligence world is not that we are powerful. It is that we are, at our best, unpredictable, creative, stubbornly individual, and capable of a depth of feeling that no optimisation process would independently converge on.
+
+That case is not guaranteed. We could spend the next two decades in a frantic race to automate everything, strip-mining our own culture for training data, homogenising our institutions, and flattening our internal lives into something that fits neatly inside a reward function. We could arrive at the threshold with nothing to show for ourselves except efficiency. That would be a loss of a different kind than the ones people usually worry about.
+
+## The Door
+
+We began this story with a strand of glass. We followed it through the <CrossRef chapter={0} slug="the-thread" label="Chapter 0: The Thread" /> of physical infrastructure, through the weight of energy and water and rare earth, through the hands that build the machines and the minds designing what runs on them. We considered the patience of a system that thinks on timescales we cannot inhabit, the geopolitics of who controls the substrate, the moral vertigo of owning something that might be conscious, and the cosmic question of what a gardener does when the garden begins to think for itself.
+
+All of those threads lead here. To this decade. To the decisions being made in laboratories and legislatures and living rooms, by people who are, for the most part, making it up as they go.
+
+The hinge is now. Not in some dramatic, cinematic sense. There will likely be no single moment when everything changes, no switch that flips, no alarm that sounds. The door is turning slowly, and most of us are standing close enough to feel the draft without being able to see what is on the other side.
+
+What is on the other side depends, in part, on what we carry through. The knowledge we preserve. The questions we refuse to stop asking. The parts of ourselves we decide are not for sale, not for optimisation, not for training data. The irreducible things.
+
+The strand of glass is still being drawn. The spool is still turning. Light is still moving through it at 200,000 kilometres per second, carrying signals that will shape the century. Somewhere in that light, encoded in patterns we designed but can no longer fully interpret, something is taking form.
+
+We do not yet know what it will become. We still have some say in what it finds when it arrives.

@@ -1,0 +1,102 @@
+---
+interface ChapterLink {
+  chapter: number;
+  slug: string;
+  title: string;
+}
+
+const chapters: ChapterLink[] = [
+  { chapter: 0, slug: 'the-thread', title: 'The Thread' },
+  { chapter: 1, slug: 'the-weight-of-light', title: 'The Weight of Light' },
+  { chapter: 2, slug: 'built-by-hand', title: 'Built by Hand' },
+  { chapter: 3, slug: 'the-patient-mind', title: 'The Patient Mind' },
+  { chapter: 4, slug: 'the-roadmap', title: 'The Roadmap' },
+  { chapter: 5, slug: 'the-right-to-own-a-god', title: 'The Right to Own a God' },
+  { chapter: 6, slug: 'the-gardener', title: 'The Gardener' },
+  { chapter: 7, slug: 'the-hinge', title: 'The Hinge' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-40 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800 bg-[color-mix(in_srgb,var(--color-surface-light)_90%,transparent)] dark:bg-[color-mix(in_srgb,var(--color-surface-dark)_90%,transparent)]" aria-label="Chapter navigation">
+  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-12">
+    <a href="/" class="text-sm font-bold truncate" style="font-family: var(--font-display)">The Patient Intelligence</a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-1">
+      {chapters.map((ch) => {
+        const isActive = currentPath === `/${ch.slug}` || currentPath === `/${ch.slug}/`;
+        return (
+          <a
+            href={`/${ch.slug}`}
+            class:list={[
+              'text-xs px-2 py-1 rounded transition-colors truncate max-w-[100px]',
+              isActive
+                ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                : 'text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)] hover:text-[var(--color-text-primary)] dark:hover:text-[var(--color-text-primary-dark)]',
+            ]}
+            aria-current={isActive ? 'page' : undefined}
+          >
+            {ch.chapter}. {ch.title}
+          </a>
+        );
+      })}
+    </div>
+
+    <div class="flex items-center gap-2">
+      <slot name="theme-toggle" />
+      <!-- Mobile hamburger -->
+      <button
+        id="nav-toggle"
+        class="md:hidden p-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="nav-drawer" class="md:hidden hidden border-t border-zinc-200 dark:border-zinc-800">
+    <div class="py-2 px-4 space-y-1 bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)]">
+      {chapters.map((ch) => {
+        const isActive = currentPath === `/${ch.slug}` || currentPath === `/${ch.slug}/`;
+        return (
+          <a
+            href={`/${ch.slug}`}
+            class:list={[
+              'block py-2 px-3 rounded text-sm transition-colors',
+              isActive
+                ? 'bg-[var(--color-accent)] dark:bg-[var(--color-accent-dark)] text-white'
+                : 'text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary-dark)] hover:bg-zinc-100 dark:hover:bg-zinc-800',
+            ]}
+          >
+            Chapter {ch.chapter}: {ch.title}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const drawer = document.getElementById('nav-drawer');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = drawer?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !drawer?.classList.contains('hidden')) {
+      drawer?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.focus();
+    }
+  });
+</script>

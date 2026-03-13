@@ -1,0 +1,22 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ChapterNav from '../components/astro/ChapterNav.astro';
+import ThemeToggle from '../components/astro/ThemeToggle.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'The Patient Intelligence', description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <ChapterNav>
+    <ThemeToggle slot="theme-toggle" />
+  </ChapterNav>
+
+  <main class="pt-16">
+    <slot />
+  </main>
+</BaseLayout>

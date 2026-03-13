@@ -1,0 +1,38 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ChapterNav from '../components/astro/ChapterNav.astro';
+import ThemeToggle from '../components/astro/ThemeToggle.astro';
+import ScrollProgress from '../components/astro/ScrollProgress.astro';
+import ChapterHeader from '../components/astro/ChapterHeader.astro';
+
+interface Props {
+  chapter: number;
+  act: string;
+  title: string;
+  estimatedMinutes: number;
+  description?: string;
+}
+
+const { chapter, act, title, estimatedMinutes, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <ScrollProgress />
+  <ChapterNav>
+    <ThemeToggle slot="theme-toggle" />
+  </ChapterNav>
+
+  <main class="pt-16 pb-24 px-4">
+    <article class="max-w-prose mx-auto">
+      <ChapterHeader
+        chapter={chapter}
+        act={act}
+        title={title}
+        estimatedMinutes={estimatedMinutes}
+      />
+      <div class="prose prose-zinc dark:prose-invert prose-lg max-w-none">
+        <slot />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

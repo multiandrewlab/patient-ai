@@ -1,0 +1,81 @@
+{
+  "description": "Parameters for the UBI viability calculator. Based on Solow-Zeira task-automation framework and arXiv 2505.18687v3 modelling.",
+  "targetUBIasGdpPercent": 11,
+  "baselineProductivityMultiplier": 1.0,
+  "baselineGovernmentRevenueSharePercent": 15,
+  "laborShareOfFederalTaxRevenue": 75,
+  "thresholds": {
+    "viable": {
+      "label": "UBI is mathematically achievable",
+      "color": "green",
+      "description": "At this productivity multiplier and government revenue share, AI-generated output is sufficient to fund UBI at 11% of GDP without new job creation."
+    },
+    "borderline": {
+      "label": "Borderline — structurally fragile",
+      "color": "amber",
+      "description": "UBI is arithmetically possible but depends on sustained AI productivity growth and political will to maintain revenue share. Any shortfall in either dimension breaks the model."
+    },
+    "notViable": {
+      "label": "UBI is not achievable",
+      "color": "red",
+      "description": "The productivity gains or government revenue share are insufficient to fund UBI at 11% of GDP. Displaced workers cannot be compensated from AI-generated wealth at these parameters."
+    }
+  },
+  "viabilityMatrix": [
+    {
+      "productivityMultiplierMin": 5,
+      "productivityMultiplierMax": null,
+      "revenueShareMin": 33,
+      "revenueShareMax": null,
+      "verdict": "viable"
+    },
+    {
+      "productivityMultiplierMin": 3,
+      "productivityMultiplierMax": 5,
+      "revenueShareMin": 33,
+      "revenueShareMax": null,
+      "verdict": "viable"
+    },
+    {
+      "productivityMultiplierMin": 5,
+      "productivityMultiplierMax": null,
+      "revenueShareMin": 15,
+      "revenueShareMax": 33,
+      "verdict": "borderline"
+    },
+    {
+      "productivityMultiplierMin": 3,
+      "productivityMultiplierMax": 5,
+      "revenueShareMin": 15,
+      "revenueShareMax": 33,
+      "verdict": "borderline"
+    },
+    {
+      "productivityMultiplierMin": null,
+      "productivityMultiplierMax": 3,
+      "revenueShareMin": null,
+      "revenueShareMax": null,
+      "verdict": "notViable"
+    }
+  ],
+  "sliders": {
+    "productivityMultiplier": {
+      "label": "AI productivity multiplier",
+      "min": 1,
+      "max": 10,
+      "default": 3,
+      "step": 0.5,
+      "tooltip": "How many times more productive is AI-assisted labour compared to pre-AI baseline? A 3x multiplier means the economy produces 3x as much output with the same or fewer workers."
+    },
+    "governmentRevenueShare": {
+      "label": "Government revenue share of AI capital profits (%)",
+      "min": 10,
+      "max": 50,
+      "default": 15,
+      "step": 1,
+      "tooltip": "What percentage of AI-generated capital profits does government capture via taxation? Current effective rate is approximately 15%. Raising to 33% halves the required productivity multiplier."
+    }
+  },
+  "counterintuitiveInsight": "Competitive AI markets — where many companies drive down prices — reduce monopoly rents, shrinking the tax base available to fund UBI. Paradoxically, a concentrated, monopolistic AI market generates larger rents that are easier for governments to tax. The system that displaces workers may need to stay monopolistic to afford paying them.",
+  "_note": "Viability thresholds derived from arXiv 2505.18687v3 (Solow-Zeira framework). Exact multiplier thresholds are model-dependent and should be treated as indicative ranges, not precise values."
+}

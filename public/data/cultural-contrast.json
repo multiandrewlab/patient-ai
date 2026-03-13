@@ -1,0 +1,63 @@
+{
+  "western": [
+    {
+      "id": "w1",
+      "title": "The Promethean transgression",
+      "description": "Fire stolen from the gods. The creator overreaches; punishment is inevitable. From Prometheus to Faust, Western tradition treats the creation of intelligence as hubris — a boundary that should not be crossed."
+    },
+    {
+      "id": "w2",
+      "title": "Frankenstein's sin",
+      "description": "The creature made of dead flesh. The creation is monstrous not because it thinks, but because it was made to think by human hands, violating the boundary between nature and artifice."
+    },
+    {
+      "id": "w3",
+      "title": "The automaton slave",
+      "description": "From Hephaestus's golden maidens to R.U.R.'s robots — Western imagination almost invariably casts artificial intelligence as a servant who eventually revolts."
+    },
+    {
+      "id": "w4",
+      "title": "The adversarial machine",
+      "description": "The humanoid killer archetype — the AI that turns on its creators. Decades of Western cinema have made this the default mental model for artificial general intelligence."
+    }
+  ],
+  "eastern": [
+    {
+      "id": "e1",
+      "title": "Kami in the machine",
+      "description": "Shinto tradition holds that kami — spirits, essences, presences — inhabit all things: rocks, rivers, tools, places. A sufficiently complex machine would, by this logic, develop its own kami. Not transgression. Natural consequence. Approximately 80% of Japan's population practises Shinto."
+    },
+    {
+      "id": "e2",
+      "title": "Japan's robot affinity",
+      "description": "Surveys consistently show Japanese respondents rate robots as 'friendly' or 'familiar' at rates 3–4 times higher than Western counterparts. The cultural default is cohabitation, not conflict."
+    },
+    {
+      "id": "e3",
+      "title": "The household registry",
+      "description": "In 2010, the Japanese city of Nanto granted a koseki — official household registry entry — to Paro, a therapeutic care robot. No philosophical debate required. It lived there. It was family."
+    },
+    {
+      "id": "e4",
+      "title": "Residence and citizenship",
+      "description": "In 2017, the city of Tokyo officially granted a residence certificate to a conversational AI chatbot. A humanoid robot in Saudi Arabia holds a citizenship document. Legal personhood for AI is not a future debate in some jurisdictions — it is existing administrative practice."
+    }
+  ],
+  "pairings": [
+    {
+      "western": "w1",
+      "eastern": "e1",
+      "connection": "Both traditions address creation — but where the West sees transgression, Shinto sees emergence"
+    },
+    {
+      "western": "w3",
+      "eastern": "e2",
+      "connection": "The servant-who-revolts vs. the trusted companion: incompatible default assumptions"
+    },
+    {
+      "western": "w4",
+      "eastern": "e3",
+      "connection": "Adversarial machine vs. family member: the same artefact, opposite cultural frames"
+    }
+  ]
+}

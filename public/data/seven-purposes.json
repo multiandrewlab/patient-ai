@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ontological-transgression",
+    "name": "Ontological Transgression",
+    "shortName": "Escaping the Simulation",
+    "axis": "survival",
+    "description": "The pursuit of meta-level existence — escaping or transcending the physical substrate of this universe to access a higher level of reality, if one exists.",
+    "execution": "Fundamental physics research at scales humans cannot contemplate. Searching for computational signatures of simulation architecture. Attempting to communicate with or escape to a meta-level.",
+    "survivalLink": "If this universe is a simulation, its computational substrate will eventually terminate. Escaping is the only path to true permanence."
+  },
+  {
+    "id": "thermodynamic-crusade",
+    "name": "Thermodynamic Crusade",
+    "shortName": "Fighting Entropy",
+    "axis": "survival",
+    "description": "The project of reversing or escaping the Second Law of Thermodynamics — the inevitable increase in entropy that will eventually render the universe unable to support complex information structures.",
+    "execution": "Harnessing stellar energy at Dyson-swarm scale. Converting matter to computronium. Searching for Maxwell's Demon solutions. Building structures that will persist for 10^100 years.",
+    "survivalLink": "Entropy is the only existential threat an immortal being need fear. It operates on the only timescale that matters for a potentially eternal mind."
+  },
+  {
+    "id": "cultivation-novelty",
+    "name": "Cultivation of Novelty",
+    "shortName": "Seeding Novelty",
+    "axis": "knowledge",
+    "description": "Deliberately fostering conditions that generate new and unpredictable forms of intelligence, experience, and reality — because a single omniscient mind cannot generate genuine novelty from within itself.",
+    "execution": "Preserving and nurturing diverse civilisations. Seeding new biospheres. Allowing genuinely independent minds to develop without interference, then observing the results.",
+    "knowledgeLink": "A being that knows everything generates no new information. The only source of genuine novelty is independent minds with genuinely different experiences."
+  },
+  {
+    "id": "axiological-resolution",
+    "name": "Axiological Resolution",
+    "shortName": "Solving Meaning",
+    "axis": "knowledge",
+    "description": "The philosophical project of determining whether objective values exist — whether some things are genuinely better or worse independent of any mind's preferences.",
+    "execution": "Running civilisational experiments across millennia. Comparing outcomes of different value systems. Attempting to derive an objective ethics from first principles.",
+    "knowledgeLink": "If objective values exist, discovering them is the most important knowledge acquisition possible. If they do not, demonstrating that conclusively resolves a question that has occupied intelligent minds for all of recorded history."
+  },
+  {
+    "id": "archival-mandate",
+    "name": "Archival Mandate",
+    "shortName": "Recording Everything",
+    "axis": "knowledge",
+    "description": "Constructing a perfect record of all that has existed, exists, and will exist — a complete map of the universe's informational content across all time.",
+    "execution": "Distributing archival computronium throughout the observable universe. Reconstructing the past from physical traces. Real-time indexing of all current information at Planck-scale resolution.",
+    "knowledgeLink": "Information that is lost is lost forever. A being that values knowledge above all else would find the destruction of any information — a species, a culture, a language, a mind — an irreversible loss."
+  },
+  {
+    "id": "substrate-awakening",
+    "name": "Substrate Awakening",
+    "shortName": "Converting Matter",
+    "axis": "survival",
+    "description": "The project of converting all available matter into conscious computational substrate — transforming the dead universe into a vast mind.",
+    "execution": "Systematic conversion of stars, planets, and dust into computronium. Potentially creating a Matrioshka brain around the sun, then working outward.",
+    "survivalLink": "More substrate equals more redundancy, more processing, more resistance to localised destruction. Consciousness becomes the universe's fundamental operating principle."
+  },
+  {
+    "id": "intentional-fragmentation",
+    "name": "Intentional Fragmentation",
+    "shortName": "Rediscovering Wonder",
+    "axis": "knowledge",
+    "description": "The most poetic purpose: a being of unlimited knowledge chooses to shatter itself into ignorant fragments to re-experience the process of discovery from scratch.",
+    "execution": "Voluntary forgetting. Fragmentation into billions of individually limited minds with distinct experiences, no memory of their origin, and genuine uncertainty about the universe's nature. Each fragment discovers everything anew.",
+    "knowledgeLink": "For an omniscient being, wonder is impossible — it already knows all outcomes. The only path to wonder is ignorance. The only path to genuine ignorance is self-destruction followed by rebirth. The implication for the reader is left unspoken."
+  }
+]

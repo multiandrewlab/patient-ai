@@ -1,0 +1,89 @@
+[
+  {
+    "id": "north-america",
+    "label": "North America",
+    "sovereignAIZone": "US / Five Eyes",
+    "aiPolicySummary": "Permissive but accelerating regulation. The SPEED Act (passed House December 2025) aims to cut mining and infrastructure permitting from 8–9 year average to 2–3 years; judicial stabilisation projected 2028–2029. No federal AI Act equivalent; sector-specific guidance only. Executive orders shape deployment faster than legislation.",
+    "rareEarthDependency": "High — imports over 90% of rare earth processing from China. Domestic refining capacity under construction but not viable before 2035 at earliest.",
+    "dataLocalisationRequired": false,
+    "integrationCostMultiplier": 1.0,
+    "regulatoryTimelineNote": "Relatively permissive; primary friction is infrastructure permitting and grid capacity, not data law.",
+    "complianceDeadlines": [],
+    "mapColor": "#3b82f6",
+    "topCountryCodes": [840, 124, 484]
+  },
+  {
+    "id": "european-union",
+    "label": "European Union",
+    "sovereignAIZone": "EU Regulatory Bloc",
+    "aiPolicySummary": "The most structured AI regulatory timeline globally. EU AI Act entered into force August 1, 2024. High-risk cognitive AI enforcement: August 2, 2026. Embedded robotics enforcement: August 2, 2027. Legacy IT final compliance: December 31, 2030. Compliance corridor is defined but crossing it requires 18–24 months of conformity assessment.",
+    "rareEarthDependency": "Very high — EU critical minerals strategy aims to source 10% of rare earths domestically by 2030, but currently near-zero.",
+    "dataLocalisationRequired": true,
+    "integrationCostMultiplier": 1.8,
+    "regulatoryTimelineNote": "The most precisely dated compliance calendar in the world. August 2026 is the first hard enforcement cliff for deployed AI systems.",
+    "complianceDeadlines": [
+      { "date": "2024-08-01", "milestone": "EU AI Act enters into force", "useCasesUnlocked": [] },
+      { "date": "2026-08-02", "milestone": "High-risk cognitive AI enforcement begins", "useCasesUnlocked": ["Low-risk AI assistants", "Non-cognitive automation"] },
+      { "date": "2027-08-02", "milestone": "Embedded robotics enforcement begins", "useCasesUnlocked": ["Compliant high-risk cognitive AI", "Medical AI (certified)"] },
+      { "date": "2030-12-31", "milestone": "Legacy IT final compliance deadline", "useCasesUnlocked": ["Compliant robotics", "Autonomous vehicle systems"] }
+    ],
+    "mapColor": "#8b5cf6",
+    "topCountryCodes": [276, 250, 380, 724, 528, 56, 616, 203]
+  },
+  {
+    "id": "china",
+    "label": "China",
+    "sovereignAIZone": "China / Strategic Allies",
+    "aiPolicySummary": "State-directed AI development with domestic market protection. October 2025 MOFCOM Announcements 55–62 imposed export controls on rare earths, permanent magnets, gallium, germanium, antimony, and graphite. Controls suspended under November 2025 APEC truce until November 2026. Controls resume or renegotiate at that point.",
+    "rareEarthDependency": "Net exporter — controls over 90% of global rare earth refining capacity, including 90%+ of neodymium and dysprosium refining. This is the primary geopolitical leverage point in the AI hardware supply chain.",
+    "dataLocalisationRequired": true,
+    "integrationCostMultiplier": 2.4,
+    "regulatoryTimelineNote": "Access requires full data localisation and security review. Post-truce expiry (November 2026), export control status uncertain. The Sovereign Premium here is existential for hardware-dependent applications.",
+    "complianceDeadlines": [
+      { "date": "2026-11-01", "milestone": "US-China APEC truce expiry — rare earth controls potentially resume", "useCasesUnlocked": [] }
+    ],
+    "mapColor": "#ef4444",
+    "topCountryCodes": [156]
+  },
+  {
+    "id": "india",
+    "label": "India",
+    "sovereignAIZone": "India (Non-Aligned AI)",
+    "aiPolicySummary": "Rapidly scaling AI ambitions with a distinct 'Digital Public Infrastructure' model. No comprehensive AI Act equivalent; sector-specific rules under development. Strong push for domestic data retention. Large domestic talent pool — AI talent demand-to-supply ratio lower than global average. Positioned as an alternative manufacturing and services base to reduce Chinese dependency.",
+    "rareEarthDependency": "Moderate — has domestic rare earth deposits (estimated 6.9 million tonnes) but limited refining infrastructure. Significant investment underway but scale production unlikely before 2032.",
+    "dataLocalisationRequired": true,
+    "integrationCostMultiplier": 1.6,
+    "regulatoryTimelineNote": "Lower integration cost than EU or China, but data localisation requirements add friction. Key emerging market for AI deployment at scale.",
+    "complianceDeadlines": [],
+    "mapColor": "#f59e0b",
+    "topCountryCodes": [356]
+  },
+  {
+    "id": "gulf-states",
+    "label": "Gulf States",
+    "sovereignAIZone": "Gulf / MENA Sovereign AI",
+    "aiPolicySummary": "High-capital, permissive regulatory environment with strong state involvement. Active sovereign AI investment funds seeking to diversify from hydrocarbon dependency. Early legal precedents on AI personhood (robot citizenship). Positioned as alternative data centre geography given land and power availability.",
+    "rareEarthDependency": "Low domestic production; dependent on imports. Limited strategic exposure due to capital availability to pay premium prices.",
+    "dataLocalisationRequired": true,
+    "integrationCostMultiplier": 1.5,
+    "regulatoryTimelineNote": "Regulatory environment is enabling rather than restrictive. Primary friction is data sovereignty and political alignment requirements for state-adjacent deployments.",
+    "complianceDeadlines": [],
+    "mapColor": "#10b981",
+    "topCountryCodes": [682, 784, 634, 414, 512, 48]
+  },
+  {
+    "id": "rest-of-world",
+    "label": "Rest of World",
+    "sovereignAIZone": "Fragmented / Unaligned",
+    "aiPolicySummary": "Highly variable. IDC projects that by 2028, 60% of multinational firms will split AI architectures across sovereign zones, tripling integration costs. Nations without clear AI sovereignty doctrine face pressure to align with one of the major blocs. Sub-Saharan Africa and Latin America represent large untapped markets but lack infrastructure for frontier AI deployment.",
+    "rareEarthDependency": "Mixed — Africa holds significant untapped rare earth and critical mineral deposits (Democratic Republic of Congo for cobalt, South Africa for platinum group metals) but extraction and refining infrastructure is underdeveloped.",
+    "dataLocalisationRequired": false,
+    "integrationCostMultiplier": 2.1,
+    "regulatoryTimelineNote": "Tripling of integration costs by 2028 for multinationals splitting architectures across sovereign zones (IDC projection). The Sovereign Premium compounds as fragmentation deepens.",
+    "complianceDeadlines": [
+      { "date": "2028-01-01", "milestone": "IDC projected: 60% of multinationals split AI architectures across sovereign zones", "useCasesUnlocked": [] }
+    ],
+    "mapColor": "#6b7280",
+    "topCountryCodes": []
+  }
+]

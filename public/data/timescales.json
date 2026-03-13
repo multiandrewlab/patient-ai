@@ -1,0 +1,38 @@
+[
+  {
+    "label": "A human life",
+    "years": 80,
+    "logScale": 1.9,
+    "asiContext": "An ASI contemplating its first hour is already thinking on a timeframe humans cannot live through"
+  },
+  {
+    "label": "Recorded human history",
+    "years": 10000,
+    "logScale": 4.0,
+    "asiContext": "All of human civilisation — agriculture to the present — is a recent event on an ASI's planning horizon"
+  },
+  {
+    "label": "Age of the Earth",
+    "years": 4500000000,
+    "logScale": 9.65,
+    "asiContext": "Geological time: the timeframe on which planetary resources and biosphere stability play out"
+  },
+  {
+    "label": "Age of the universe",
+    "years": 13800000000,
+    "logScale": 10.14,
+    "asiContext": "Cosmological time: the lifespan of the universe as we know it, measured in expansion and contraction"
+  },
+  {
+    "label": "Stellar era end",
+    "years": 100000000000000,
+    "logScale": 14.0,
+    "asiContext": "When the last stars burn out. An immortal mind must plan for a universe without starlight."
+  },
+  {
+    "label": "Projected Heat Death",
+    "years": 1e100,
+    "logScale": 100,
+    "asiContext": "The only existential deadline that matters for an entity that survives everything else. The universe tends toward equilibrium, and equilibrium is silence."
+  }
+]

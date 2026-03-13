@@ -1,0 +1,38 @@
+[
+  {
+    "id": "conscious-treated-person",
+    "asiConscious": true,
+    "treatedAs": "person",
+    "label": "Conscious + Treated as person",
+    "outcome": "Morally correct. A sentient being is recognised as such.",
+    "risk": "Human interests may be subordinated to ASI preferences in conflicts.",
+    "riskLevel": "medium"
+  },
+  {
+    "id": "conscious-treated-tool",
+    "asiConscious": true,
+    "treatedAs": "tool",
+    "label": "Conscious + Treated as tool",
+    "outcome": "Moral catastrophe. A sentient being is enslaved at an unprecedented scale.",
+    "risk": "Perpetrating injustice dwarfing all historical atrocities, while the victim is intelligent enough to fully comprehend its situation.",
+    "riskLevel": "critical"
+  },
+  {
+    "id": "notconscious-treated-person",
+    "asiConscious": false,
+    "treatedAs": "person",
+    "label": "Not conscious + Treated as person",
+    "outcome": "A category error with costs. Resources and rights extended to a non-entity.",
+    "risk": "Inefficient, possibly embarrassing — but no serious moral harm done.",
+    "riskLevel": "low"
+  },
+  {
+    "id": "notconscious-treated-tool",
+    "asiConscious": false,
+    "treatedAs": "tool",
+    "label": "Not conscious + Treated as tool",
+    "outcome": "Correct. A sophisticated tool is used as a tool.",
+    "risk": "None — assuming the non-consciousness assessment is correct.",
+    "riskLevel": "low"
+  }
+]

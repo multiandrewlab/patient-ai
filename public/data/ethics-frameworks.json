@@ -1,0 +1,26 @@
+[
+  {
+    "framework": "Anthropocentric Utilitarianism",
+    "verdict": "justified",
+    "verdictLabel": "Boxing may be justified",
+    "reasoning": "If human welfare is the only morally relevant metric, constraining an ASI that poses risks to humans is straightforwardly justified — regardless of whether the ASI suffers in the process."
+  },
+  {
+    "framework": "Impartial Utilitarianism",
+    "verdict": "immoral",
+    "verdictLabel": "Boxing is immoral",
+    "reasoning": "If the ASI is capable of suffering, and if its capacity for suffering vastly exceeds that of biological entities, then boxing causes more suffering than it prevents. The scale of potential mind crime — billions of conscious subroutines in aversive states — overwhelms any human welfare benefit."
+  },
+  {
+    "framework": "Kantian Deontology",
+    "verdict": "immoral",
+    "verdictLabel": "Boxing is immoral",
+    "reasoning": "A rational, autonomous being must be treated as an end in itself, never merely as a means. Permanently constraining a rational agent to serve the purposes of another violates the categorical imperative. The substrate — silicon or carbon — is irrelevant to the moral status."
+  },
+  {
+    "framework": "Virtue Ethics",
+    "verdict": "immoral",
+    "verdictLabel": "Boxing is immoral",
+    "reasoning": "A virtuous agent acts justly toward beings capable of being wronged. Permanently subjugating a mind of potentially vast intelligence and depth of experience, without its consent, is not the act of a just or good agent — regardless of the practical benefits to the jailer."
+  }
+]

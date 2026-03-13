@@ -1,0 +1,43 @@
+{
+  "targetChips": 35000000000,
+  "knowledgeWorkers": 3500000000,
+  "defaultChipsPerBrain": 10,
+  "projectedFabOutput2030": {
+    "min": 300000000,
+    "max": 900000000,
+    "default": 600000000,
+    "_note": "Advanced AI-class chip (H100-equivalent) annual fab output projections for 2030. Current global capacity severely constrained by EUV tooling and packaging bottlenecks. Source: FABRICATION-summary.md."
+  },
+  "sliders": {
+    "flopsPerBrain": {
+      "label": "FLOPS per human brain",
+      "min": 1e14,
+      "max": 1e16,
+      "default": 1e15,
+      "scale": "log",
+      "_note": "1e15 (10^15) FLOPS is a commonly cited estimate for human brain computational equivalence. Range spans conservative to high estimates."
+    },
+    "algorithmicEfficiency": {
+      "label": "Annual algorithmic efficiency gain (%)",
+      "min": 5,
+      "max": 50,
+      "default": 20,
+      "_note": "Historical algorithmic efficiency gains have averaged ~44% per year (AI and Compute, Epoch AI). Default 20% is conservative."
+    },
+    "fabOutputGrowth": {
+      "label": "Annual fab output growth (%)",
+      "min": 10,
+      "max": 40,
+      "default": 20,
+      "_note": "Constrained by EUV machine throughput (Lumen Optics produces ~50 units/year), CoWoS packaging capacity, and HBM supply. Source: FABRICATION-summary.md."
+    }
+  },
+  "currentConstraints": {
+    "euvMachinesPerYear": 50,
+    "euvSupplier": "Lumen Optics",
+    "euvSupplierCountry": "Netherlands",
+    "cowosBottleneck": "Sold out through 2026",
+    "hbmBottleneck": "Sold out; HBM3e in shortage",
+    "_note": "EUV machine count approximate; Lumen Optics figure cited in FABRICATION-summary.md."
+  }
+}

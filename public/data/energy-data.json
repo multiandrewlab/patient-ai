@@ -1,0 +1,24 @@
+{
+  "brainVsSilicon": {
+    "brainWatts": 20,
+    "supercomputerMegawatts": 21,
+    "ratio": 1000000,
+    "note": "21MW for a frontier model's training cluster to approach brain-scale reasoning. Human brain operates on ~20W — the equivalent of a dim light bulb."
+  },
+  "demandSurge": [
+    { "year": 2022, "forecastGW": 24 },
+    { "year": 2023, "forecastGW": 47 },
+    { "year": 2024, "forecastGW": 89 },
+    { "year": 2025, "forecastGW": 166 }
+  ],
+  "_note_demandSurge": "US five-year peak demand forecasts — surged six-fold between 2022 and 2025, driven overwhelmingly by AI data centres.",
+  "jevonsParadox": [
+    { "year": 2015, "efficiencyIndex": 1.0, "trainingEnergyIndex": 1.0 },
+    { "year": 2017, "efficiencyIndex": 4.2, "trainingEnergyIndex": 4.8 },
+    { "year": 2019, "efficiencyIndex": 18.0, "trainingEnergyIndex": 22.0 },
+    { "year": 2021, "efficiencyIndex": 75.0, "trainingEnergyIndex": 95.0 },
+    { "year": 2023, "efficiencyIndex": 310.0, "trainingEnergyIndex": 400.0 },
+    { "year": 2025, "efficiencyIndex": 1200.0, "trainingEnergyIndex": 1800.0 }
+  ],
+  "_note_jevonsParadox": "Approximate multipliers indexed to 2015 baseline. Both hardware efficiency and total training energy have risen together — efficiency gains are consumed by ever-larger model ambitions. Source: POWER-summary.md."
+}

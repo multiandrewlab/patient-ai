@@ -1,0 +1,87 @@
+{
+  "totalYears": 17,
+  "_note_totalYears": "Average 17 years from discovery to first commercial production as of early 2020s. Was 13 years for projects commissioned in late 2000s — timeline is lengthening. Source: RESOURCES-summary.md.",
+  "stages": [
+    {
+      "name": "Discovery & exploration",
+      "startYear": 0,
+      "durationYears": 3,
+      "description": "Geological survey, drilling, resource estimation, and feasibility study."
+    },
+    {
+      "name": "Permitting & environmental review",
+      "startYear": 3,
+      "durationYears": 4,
+      "description": "Regulatory filings, environmental impact assessment, community consultation. More than two-thirds of total timeline spent here and in legal challenges."
+    },
+    {
+      "name": "Legal challenges & appeals",
+      "startYear": 7,
+      "durationYears": 7,
+      "description": "Opposition litigation, appeals, Indigenous rights consultations. The single largest time sink in the modern mining cycle.",
+      "_note": "Legal/permitting phases together consume >67% of the 17-year timeline."
+    },
+    {
+      "name": "Construction",
+      "startYear": 14,
+      "durationYears": 3,
+      "description": "Mine infrastructure build-out: access roads, processing plant, tailings facilities, power and water connections."
+    },
+    {
+      "name": "First production",
+      "startYear": 17,
+      "durationYears": null,
+      "description": "Commercial ore production begins. Supply response to the 2024–2026 AI demand surge arrives no earlier than the late 2030s."
+    }
+  ],
+  "presets": [
+    {
+      "id": "ai-boom-2024",
+      "label": "2024 AI Boom",
+      "demandShockYear": 2024,
+      "firstProductionYear": 2041,
+      "note": "The surge in AI chip demand that began with large language models. Any mine started in response to 2024 demand cannot produce until ~2041."
+    },
+    {
+      "id": "robotics-2026",
+      "label": "2026 Robotics Demand",
+      "demandShockYear": 2026,
+      "firstProductionYear": 2043,
+      "note": "Projected humanoid robotics demand spike driving neodymium and rare earth demand. Response supply arrives ~2043."
+    }
+  ],
+  "keyMinerals": [
+    {
+      "mineral": "Neodymium",
+      "use": "Permanent magnets in robot actuators and EV motors",
+      "chinaRefiningShare": 100,
+      "unit": "%",
+      "_note": "China controls ~100% of dysprosium and dominates neodymium refining. Export controls introduced 2024–2025."
+    },
+    {
+      "mineral": "Gallium",
+      "use": "Compound semiconductors, LED, 5G chips",
+      "chinaRefiningShare": 98,
+      "unit": "%"
+    },
+    {
+      "mineral": "Cobalt",
+      "use": "Lithium-ion battery cathodes",
+      "chinaRefiningShare": 70,
+      "unit": "%"
+    },
+    {
+      "mineral": "Lithium",
+      "use": "Battery electrolytes",
+      "chinaRefiningShare": 60,
+      "unit": "%"
+    },
+    {
+      "mineral": "Copper",
+      "use": "Electrical wiring, data center busbars, EV motors",
+      "chinaImportShareOfConcentrate": 66,
+      "unit": "%",
+      "_note": "China's share of global copper concentrate imports rose from 43% (2015) to 66% (2024). Source: RESOURCES-summary.md."
+    }
+  ]
+}

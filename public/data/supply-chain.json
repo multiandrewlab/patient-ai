@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "accelerator",
+      "label": "AI Accelerator Chip",
+      "description": "End product — the chip powering AI training and inference",
+      "lat": 25.0,
+      "lon": 121.5,
+      "region": "Taiwan",
+      "leadTimeWeeks": null,
+      "geopoliticalRisk": "critical",
+      "company": "Titan Semiconductor",
+      "_note": "Titan Semiconductor = fictional replacement for TSMC"
+    },
+    {
+      "id": "packaging",
+      "label": "Advanced Packaging (CoWoS)",
+      "description": "Chip-on-Wafer-on-Substrate — critical bottleneck for AI chip stacking",
+      "lat": 24.8,
+      "lon": 120.9,
+      "region": "Taiwan",
+      "leadTimeWeeks": "sold out through 2026",
+      "geopoliticalRisk": "critical",
+      "company": "Titan Semiconductor"
+    },
+    {
+      "id": "hbm",
+      "label": "High-Bandwidth Memory (HBM3e)",
+      "description": "Essential high-speed memory layer stacked on AI accelerators — HBM3e fully allocated",
+      "lat": 37.5,
+      "lon": 127.0,
+      "region": "South Korea",
+      "leadTimeWeeks": "sold out",
+      "geopoliticalRisk": "high",
+      "company": "Multiple — 3 suppliers globally",
+      "_note": "Three primary HBM suppliers globally; names withheld per no-trademark rule"
+    },
+    {
+      "id": "euv",
+      "label": "EUV Lithography Machine",
+      "description": "The $400M machine that makes sub-7nm chips possible — only one supplier globally",
+      "lat": 51.4,
+      "lon": 5.5,
+      "region": "Netherlands",
+      "leadTimeWeeks": "52-104",
+      "geopoliticalRisk": "high",
+      "company": "Lumen Optics",
+      "_note": "Lumen Optics = fictional replacement for ASML. ~50 units/year production capacity. Export-controlled."
+    },
+    {
+      "id": "refinery",
+      "label": "Rare Earth Refinery",
+      "description": "China controls 98% of gallium, 100% of natural graphite, 100% of dysprosium, ~70% of cobalt refining",
+      "lat": 35.9,
+      "lon": 104.2,
+      "region": "China",
+      "leadTimeWeeks": null,
+      "geopoliticalRisk": "extreme",
+      "company": "State-controlled"
+    },
+    {
+      "id": "mine",
+      "label": "Critical Mineral Mine",
+      "description": "Raw ore — 17-year average development cycle from discovery to first production",
+      "lat": 35.0,
+      "lon": 105.0,
+      "region": "China / Inner Mongolia",
+      "leadTimeWeeks": "884",
+      "geopoliticalRisk": "extreme",
+      "company": "Multiple",
+      "_note": "17 years = ~884 weeks. Timeline lengthening: 13 years avg for late-2000s projects, 18 years for early-2020s. Source: RESOURCES-summary.md."
+    },
+    {
+      "id": "chip-designer",
+      "label": "AI Chip Designer",
+      "description": "Fabless semiconductor company designing the accelerator architecture",
+      "lat": 37.3,
+      "lon": -122.0,
+      "region": "USA",
+      "leadTimeWeeks": null,
+      "geopoliticalRisk": "medium",
+      "company": "Meridian Dynamics",
+      "_note": "Meridian Dynamics = fictional replacement for NVIDIA"
+    }
+  ],
+  "edges": [
+    { "from": "mine", "to": "refinery" },
+    { "from": "refinery", "to": "euv" },
+    { "from": "refinery", "to": "hbm" },
+    { "from": "euv", "to": "packaging" },
+    { "from": "hbm", "to": "packaging" },
+    { "from": "chip-designer", "to": "packaging" },
+    { "from": "packaging", "to": "accelerator" }
+  ]
+}

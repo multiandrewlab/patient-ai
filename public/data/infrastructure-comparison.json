@@ -1,0 +1,30 @@
+[
+  {
+    "programme": "AI Infrastructure Buildout",
+    "peakGdpPercent": 1.3,
+    "peakYear": 2025,
+    "projectedTotal7yr": 7000,
+    "notes": "Projected $7T globally by end of decade; up to $3T capex by 2030 in US alone"
+  },
+  {
+    "programme": "Apollo Programme",
+    "peakGdpPercent": 0.4,
+    "peakYear": 1966,
+    "projectedTotal7yr": null,
+    "notes": "Peak annual spend ~$45B in 2023 dollars"
+  },
+  {
+    "programme": "Manhattan Project",
+    "peakGdpPercent": 0.35,
+    "peakYear": 1944,
+    "projectedTotal7yr": null,
+    "notes": "~$30B in 2023 dollars total"
+  },
+  {
+    "programme": "Interstate Highway System",
+    "peakGdpPercent": 0.42,
+    "peakYear": 1959,
+    "projectedTotal7yr": null,
+    "notes": "~$600B in 2023 dollars total over 35 years"
+  }
+]

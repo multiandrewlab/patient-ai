@@ -1,0 +1,62 @@
+[
+  {
+    "component": "Large power transformers",
+    "minWeeks": 128,
+    "maxWeeks": 144,
+    "category": "electrical",
+    "note": "Custom wound; one dominant supplier globally. Up from ~20–30 weeks historically. Critical path item for every major data centre.",
+    "_note": "Source: CONSTRUCTION-summary.md. 128–144 weeks = ~2.5–2.75 years."
+  },
+  {
+    "component": "Standby generators (diesel/gas)",
+    "minWeeks": 72,
+    "maxWeeks": 104,
+    "category": "electrical",
+    "note": "Historically 20–30 weeks; now 72–104+ weeks due to surging data centre demand. Diesel and gas variants both constrained."
+  },
+  {
+    "component": "Medium-voltage switchgear",
+    "minWeeks": 45,
+    "maxWeeks": 100,
+    "category": "electrical",
+    "note": "Dependent on specialised components from 2–3 global suppliers. Factory delays compound on materials shortages."
+  },
+  {
+    "component": "Fibre optic cable (ribbon)",
+    "minWeeks": 60,
+    "maxWeeks": 78,
+    "category": "network",
+    "note": "Glass preform raw material globally exhausted; affects all grades. New preform manufacturing capacity will not alleviate shortages before 2027. AI hyperscale requires 36x more fibre than traditional data centres."
+  },
+  {
+    "component": "Major chillers",
+    "minWeeks": 43,
+    "maxWeeks": 69,
+    "category": "cooling",
+    "note": "10–16 months; HFC refrigerant regulatory transitions adding complexity. Direct liquid cooling variants in even shorter supply.",
+    "_note": "43 weeks ≈ 10 months; 69 weeks ≈ 16 months. Source: CONSTRUCTION-summary.md."
+  },
+  {
+    "component": "UPS systems (large / utility-scale)",
+    "minWeeks": 26,
+    "maxWeeks": 52,
+    "category": "electrical",
+    "note": "Lithium battery supply improving but still constrained. 6–12 months lead time typical for large-scale uninterruptible power systems."
+  },
+  {
+    "component": "EUV lithography machine",
+    "minWeeks": 52,
+    "maxWeeks": 104,
+    "category": "semiconductor",
+    "note": "Single global supplier (Lumen Optics, Netherlands). ~50 units/year production capacity. Each unit ~$400M. Export-controlled by Dutch government.",
+    "_note": "Lumen Optics = fictional replacement for ASML. Source: FABRICATION-summary.md."
+  },
+  {
+    "component": "CoWoS advanced packaging capacity",
+    "minWeeks": 104,
+    "maxWeeks": 156,
+    "category": "semiconductor",
+    "note": "Chip-on-Wafer-on-Substrate packaging sold out through 2026. Capacity expansion requires 2–3 year construction of new fab bays.",
+    "_note": "Figures approximate from 'sold out through 2026' language in FABRICATION-summary.md."
+  }
+]

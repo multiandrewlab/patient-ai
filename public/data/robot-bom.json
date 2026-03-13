@@ -1,0 +1,58 @@
+[
+  {
+    "region": "torso",
+    "label": "Actuators & Motors",
+    "costPercent": 45,
+    "description": "Series elastic actuators with rare-earth permanent magnets. Each humanoid contains 28–44 precision actuators. Current unit cost $500–$2,000 per actuator; total actuator BOM $13,500–$40,000 per robot.",
+    "bottleneck": "Rare earth neodymium-iron-boron magnets; export-controlled from primary supplier. Strain wave gears dominated by two suppliers (combined ~43% global share).",
+    "riskLevel": "critical",
+    "supplyRisk": "Dependent on rare earth exports; 400–437% price spike risk on export control. Machine tool lead times for CNC gear-grinding machines: 18–24 weeks.",
+    "_note": "Gear suppliers are fictional analogues to Nabtesco and Harmonic Drive SE. Source: ROBOT-summary.md."
+  },
+  {
+    "region": "hands",
+    "label": "Dextrous Hands",
+    "costPercent": 31,
+    "description": "Multi-finger dextrous manipulation systems — the hardest mechanical problem in robotics. Requires >100 individual precision components per hand.",
+    "bottleneck": "Precision machining at scale; limited qualified suppliers globally. No existing production line capable of manufacturing at humanoid fleet volumes.",
+    "riskLevel": "high",
+    "supplyRisk": "High precision requirements limit manufacturing base. New machining infrastructure takes 18–36 months to commission."
+  },
+  {
+    "region": "head",
+    "label": "Computing & Sensors",
+    "costPercent": 15,
+    "description": "Onboard inference chips, vision sensors, LIDAR, and IMUs for spatial awareness and real-time control.",
+    "bottleneck": "Advanced semiconductor supply — same constrained supply chain as AI data centres. CoWoS packaging sold out through 2026.",
+    "riskLevel": "high",
+    "supplyRisk": "Dependent on the same advanced chip supply chain as AI data centres. Any chip shortage cascades directly to robot production."
+  },
+  {
+    "region": "battery",
+    "label": "Battery & Power",
+    "costPercent": 5,
+    "description": "Current: lithium-ion, 2–4 hour operational life. Next-gen: solid-state (higher density, faster charge, no liquid electrolyte fire risk).",
+    "bottleneck": "Solid-state batteries still pre-commodity as of 2026; production yield rates low",
+    "riskLevel": "medium",
+    "supplyRisk": "Improving rapidly; solid-state expected at scale 2028–2030"
+  },
+  {
+    "region": "chassis",
+    "label": "Chassis & Structure",
+    "costPercent": 4,
+    "description": "Aluminium and composite frame. Relatively commoditised. Lightweight design critical for power efficiency.",
+    "bottleneck": "None significant at current scale",
+    "riskLevel": "low",
+    "supplyRisk": "Low — well-established manufacturing base"
+  },
+  {
+    "region": "summary",
+    "label": "Total Robot Cost (2025–2026)",
+    "costPercent": 100,
+    "description": "Prototype-to-near-commercial range. Early prototypes: $150,000–$500,000 (2023). Near-commercial: $30,000–$150,000 (2025–2026). Mass-market target: $15,000–$30,000. Commodity target: $8,000–$15,000 (2033+).",
+    "bottleneck": "Actuator supply chain is primary cost and volume constraint",
+    "riskLevel": "high",
+    "supplyRisk": "Goldman Sachs projects 1.4M annual unit shipments by 2035, up from ~16,000 in 2025. <20 companies expected to achieve high-throughput production by 2028 (Gartner).",
+    "_note": "Market estimates: Goldman Sachs $38B TAM by 2035 (revised from $6B — 6x upward revision). Morgan Stanley / ARK Invest project $1–$5T by 2050. Source: ROBOT-summary.md."
+  }
+]

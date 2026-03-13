@@ -1,0 +1,91 @@
+{
+  "revenuePerMonth": 14200000,
+  "_note_revenue": "Delaying commissioning a 60 MW data center costs an estimated $14.2 million per month in lost revenue. Source: CONSTRUCTION-summary.md.",
+  "facilityMW": 60,
+  "stages": [
+    {
+      "id": 1,
+      "name": "Site preparation",
+      "description": "Grading, drainage, utility rough-in. 200 workers, 6 months.",
+      "complete": true,
+      "durationMonths": 6
+    },
+    {
+      "id": 2,
+      "name": "Structural frame",
+      "description": "Steel superstructure. The building takes shape. Hyperscale campuses routinely require 4,000–5,000 simultaneous workers at peak.",
+      "complete": true,
+      "durationMonths": 4
+    },
+    {
+      "id": 3,
+      "name": "Mechanical & electrical rough-in",
+      "description": "Conduit, ductwork, and primary cable runs installed before walls close. AI rack densities: 50–100 kW vs. traditional 5–10 kW.",
+      "complete": true,
+      "durationMonths": 5
+    },
+    {
+      "id": 4,
+      "name": "Power infrastructure",
+      "description": "Substations, switchgear, and distribution gear landed and connected. Transformers ordered 18+ months in advance.",
+      "complete": true,
+      "durationMonths": 4
+    },
+    {
+      "id": 5,
+      "name": "Cooling systems",
+      "description": "Chillers, cooling towers, precision air handlers commissioned. AI heat density demands direct liquid cooling rather than air.",
+      "complete": true,
+      "durationMonths": 3
+    },
+    {
+      "id": 6,
+      "name": "Network & fibre",
+      "description": "Inside plant fibre, cable management, and patch panels installed. AI hyperscale requires up to 36x more internal optical fibre than traditional data centres.",
+      "complete": true,
+      "durationMonths": 2
+    },
+    {
+      "id": 7,
+      "name": "Final commissioning",
+      "description": "Systems integration, load testing, sign-off. Blocked by missing long-lead components — see missingComponents.",
+      "complete": false,
+      "locked": true,
+      "durationMonths": 2
+    }
+  ],
+  "missingComponents": [
+    {
+      "id": "transformer",
+      "name": "Main power transformer",
+      "description": "128–144 week lead time (~3 years). Ordered 18 months ago. Still in production. Custom wound; one dominant supplier globally.",
+      "monthlyRevenueLoss": 14200000,
+      "leadTimeWeeksMin": 128,
+      "leadTimeWeeksMax": 144
+    },
+    {
+      "id": "switchgear",
+      "name": "Medium-voltage switchgear",
+      "description": "45–100 week lead time. Factory delayed by a supplier's materials shortage. Dependent on specialised components from 2–3 global suppliers.",
+      "monthlyRevenueLoss": 14200000,
+      "leadTimeWeeksMin": 45,
+      "leadTimeWeeksMax": 100
+    },
+    {
+      "id": "fibre",
+      "name": "Specialised fibre optic cable",
+      "description": "60+ week lead time. Global preform shortage — the same crisis as every other data centre being built simultaneously. New preform capacity will not alleviate shortages before 2027.",
+      "monthlyRevenueLoss": 14200000,
+      "leadTimeWeeksMin": 60,
+      "leadTimeWeeksMax": 78
+    },
+    {
+      "id": "engineer",
+      "name": "Commissioning engineer",
+      "description": "The one certified engineer for this switchgear model is booked 14 months out. No substitute exists. ~30% of active union electricians are aged 50–70; 439,000-worker construction deficit as of late 2025.",
+      "monthlyRevenueLoss": 14200000,
+      "leadTimeWeeksMin": 56,
+      "leadTimeWeeksMax": 60
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "mlPerQuery": {
+    "min": 10,
+    "max": 50,
+    "default": 25,
+    "source": "500ml per 10-50 responses; estimate from industry usage reports"
+  },
+  "vessels": [
+    { "name": "Glass of water", "ml": 250, "icon": "glass" },
+    { "name": "Standard bathtub", "ml": 300000, "icon": "bathtub" },
+    { "name": "Olympic swimming pool", "ml": 2500000000, "icon": "pool" }
+  ],
+  "referencePoints": [
+    {
+      "label": "Mid-sized data centre (daily)",
+      "litres": 300000,
+      "description": "~300,000 litres per day for evaporative cooling"
+    },
+    {
+      "label": "Hyperscale data centre (daily)",
+      "litres": 18927059,
+      "description": "Up to 5 million gallons per day (18.9M litres) — for largest AI hyperscale facilities",
+      "_note": "5 million US gallons = 18,927,059 litres. Source: POWER-summary.md 2024 US Data Center Energy Usage Report."
+    }
+  ],
+  "growthProjection": {
+    "startYear": 2023,
+    "endYear": 2028,
+    "growthMultiplierMin": 2,
+    "growthMultiplierMax": 4,
+    "_note": "US on-site data center water use projected to grow 2–4x between 2023 and 2028. Source: 2024 US Data Center Energy Usage Report via POWER-summary.md."
+  }
+}

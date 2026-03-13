@@ -14,6 +14,14 @@ The aim of this project is to create an interative web based experience that tel
 - Make the experience multimedia and interactive to enhance the experience and boost the impact
 - The style of the website should be clean and clear, with a touch of whimsy and fun, but still maintain a serious tone appropriate to the subject matter.
 
+## Research Data
+
+- [PROPOSAL.md](./PROPOSAL.md) - The core proposal for the idea behind this website
+- [PURPOSE.md](./PURPOSE.md) - Research on the purpose an ASI might choose to pursure to backup the core proposal purpose section
+- [MORALITY.md](./MORALITY.md) - Research on the morality of controlling ASI to provide weight to the idea of not controlling ASI
+- [constraints/](./constraints/) - Research on the constraints to building out AI and Robotics to help ground timelines in reality
+- [innovation/](./innovation/) - Research on the innovations that an ASI might pursue, split into space based manufactoring and it's timelines as this is a key part of the proposal, and then other wider technological innovations
+
 # Tech Stack & Guidelines
 
 ## Stack
